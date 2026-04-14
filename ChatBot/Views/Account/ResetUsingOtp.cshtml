@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Reset via OTP";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height:75vh;">
+    <div class="card shadow-lg border-0" style="max-width:450px; width:100%;">
+        <div class="card-body p-4">
+
+            <h3 class="fw-bold text-center mb-3">Reset via OTP 🔢</h3>
+
+            <form asp-controller="Account" asp-action="SendOtp" method="post">
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input type="email"
+                           name="email"
+                           class="form-control form-control-lg"
+                           placeholder="Enter your email"
+                           required />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Send OTP
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

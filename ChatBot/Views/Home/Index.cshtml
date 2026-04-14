@@ -1,0 +1,258 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Karla', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #1a0f2e 0%, #2a1a4e 100%);
+        color: white;
+        text-align: center;
+        padding: 120px 0 80px; /* space for fixed navbar */
+    }
+
+    h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 4rem;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255, 153, 51, 0.15);
+        border: 1px solid rgba(255, 153, 51, 0.3);
+        color: #FF9933;
+        padding: 0.6rem 1.5rem;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    .cta-primary {
+        background: #FF9933;
+        padding: 14px 40px;
+        border-radius: 40px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #1a0f2e;
+        display: inline-block;
+        margin: 10px;
+        transition: 0.3s;
+    }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            background: #f4a261;
+        }
+
+    .cta-secondary {
+        border: 2px solid white;
+        padding: 14px 40px;
+        border-radius: 40px;
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #1a0f2e;
+        }
+
+    .stats-bar {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-family: 'DM Serif Display', serif;
+        font-size: 2.5rem;
+        color: #FF9933;
+        display: block;
+    }
+
+    .stat-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .features {
+        padding: 100px 0;
+        background: #faf8f3;
+        text-align: center;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        transition: 0.3s;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+    footer {
+        background: #1c1c1e;
+        color: rgba(255,255,255,0.7);
+        padding: 60px 0 30px;
+    }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+
+            footer a:hover {
+                color: #FF9933;
+            }
+</style>
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="text-center">
+
+            <span class="hero-badge">Powered by Advanced AI</span>
+
+            <h1 class="display-3 fw-bold">
+                India’s Smartest <br />
+                AI Assistant 🤖
+            </h1>
+
+            <p class="lead mt-4 mb-5">
+                Experience AI built for Indian users — fast, secure & multilingual.
+            </p>
+
+            <div>
+                <a asp-controller="Chat" asp-action="Index" class="cta-primary">
+                    Start Chatting Free
+                </a>
+
+                <a href="#features" class="cta-secondary">
+                    Learn More
+                </a>
+            </div>
+
+            <div class="stats-bar">
+                <div>
+                    <span class="stat-number">22+</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+
+                <div>
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Conversations</span>
+                </div>
+
+                <div>
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="container">
+
+        <h2 class="mb-5" style="font-family:'DM Serif Display'; font-size:3rem;">
+            Built for India 🇮🇳
+        </h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>🗣️ Multilingual</h4>
+                    <p>Supports 20+ Indian languages seamlessly.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>⚡ Fast</h4>
+                    <p>Optimized for Indian network conditions.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>🔒 Secure</h4>
+                    <p>Privacy-first AI with Indian data compliance.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h4 style="font-family:'DM Serif Display'; color:white;">
+                    BharatBot 🤖
+                </h4>
+                <p>India's AI assistant built for cultural intelligence.</p>
+            </div>
+
+            <div class="col-md-2">
+                <h6 class="text-white">Product</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h6 class="text-white">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h6 class="text-white">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border-color:rgba(255,255,255,0.1);" />
+
+        <div class="text-center">
+            © 2026 BharatBot. Made in India ❤️
+        </div>
+
+    </div>
+</footer>
